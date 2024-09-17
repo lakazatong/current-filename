@@ -2,6 +2,13 @@
 
 const path = require('path');
 
+function getCallerFile() {
+	const e = new Error();
+	const frame = e.stack.split('\n')[3].trim();
+	const filePath = frame.split(':').reverse()[2].split(path.sep).reverse()[0];
+	return filePath;
+}
+
 if (!global.__line) {
 	Object.defineProperty(global, '__line', {
 		get: function () {
@@ -11,13 +18,6 @@ if (!global.__line) {
 			return lineNumber || '';
 		},
 	});
-}
-
-function getCallerFile() {
-	const e = new Error();
-	const frame = e.stack.split('\n')[3].trim();
-	const filePath = frame.split(':').reverse()[2].split(path.sep).reverse()[0];
-	return filePath;
 }
 
 if (!global.__cfn) {

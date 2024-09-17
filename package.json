@@ -1,0 +1,19 @@
+{
+  "name": "current-filename",
+  "version": "1.0.0",
+  "description": "A helper module to retrieve current line number and filename easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lakazatong & Pupariaa",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakazatong/current-filename.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lakazatong/current-filename/issues"
+  },
+  "homepage": "https://github.com/lakazatong/current-filename#readme"
+}
